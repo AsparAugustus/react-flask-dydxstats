@@ -1,6 +1,6 @@
 import './App.css';
 import React from 'react';
-import DashboardContent from './Dashboard';
+import * from './Dashboard';
 
 function App() {
   return (
