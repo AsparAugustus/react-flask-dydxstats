@@ -1,11 +1,11 @@
 import './App.css';
 import React from 'react';
-import * from './Dashboard';
+import DashboardContent from './Dashboard';
 
 function App() {
   return (
     <div className="App">
-   <Dashboard.DashboardContent />
+   <DashboardContent />
    </div>
    
   );
