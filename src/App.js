@@ -5,7 +5,7 @@ import * from './Dashboard';
 function App() {
   return (
     <div className="App">
-   <DashboardContent />
+   <Dashboard.DashboardContent />
    </div>
    
   );

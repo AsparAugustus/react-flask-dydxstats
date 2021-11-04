@@ -30,14 +30,17 @@ except KeyError:
     pass
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
+"""
 database_url = os.getenv(
     'DATABASE_URL',
     default='postgres://localhost/postgres',  # E.g., for local dev
 )
+"""
 
 try:
     conn = psycopg2.connect(
-        database=DATABASE_URL
+        #database=DATABASE_URL
+        database="funding_stats", user='postgres', password='password', host='127.0.0.1', port='5432'
     )
 
     cursor = conn.cursor()
@@ -128,6 +131,8 @@ while True:
         sql_execute(instrument)
 
     conn.commit()
+
+    print(datetime.datetime.now().minute)
 
     time.sleep(60 - datetime.datetime.now().second)
 
