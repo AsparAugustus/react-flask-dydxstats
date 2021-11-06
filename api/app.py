@@ -30,17 +30,16 @@ except KeyError:
     pass
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-
+#default='postgres://localhost/postgres',  # E.g., for local dev
 database_url = os.getenv(
     'DATABASE_URL'
-    #default='postgres://localhost/postgres',  # E.g., for local dev
 )
 
-
+#database="funding_stats", user='postgres', password='password', host='127.0.0.1', port='5432'
 try:
     conn = psycopg2.connect(
         database=database_url
-        #database="funding_stats", user='postgres', password='password', host='127.0.0.1', port='5432'
+        
     )
 
     cursor = conn.cursor()
