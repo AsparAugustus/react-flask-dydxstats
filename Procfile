@@ -1,2 +1,2 @@
 web: yarn start
-worker: gunicorn --pythonpath api app:app
+worker: yarn start-api
