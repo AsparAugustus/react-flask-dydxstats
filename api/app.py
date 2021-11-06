@@ -30,19 +30,7 @@ except KeyError:
     pass
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-#default='postgres://localhost/postgres',  # E.g., for local dev
-database_url = os.getenv(DATABASE_URL)
-
 #database="funding_stats", user='postgres', password='password', host='127.0.0.1', port='5432'
-try:
-    conn = psycopg2.connect(
-        database=database_url
-        
-    )
-
-    cursor = conn.cursor()
-except:
-    print("there's something wrong")
 
 
 # not too sure what this does
@@ -88,9 +76,7 @@ for key, value in market_list.items():
 #The format for dictionary within a dictionary
 #market_list["BTC-USD"]["nextFundingRate"]
 
-conn = psycopg2.connect(
-    database="funding_stats", user='postgres', password='password', host='127.0.0.1', port='5432'
-)
+conn = psycopg2.connect(os.getenv("DATABASE_URL"))
 
 cursor = conn.cursor()
 
