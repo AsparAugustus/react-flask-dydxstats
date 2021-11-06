@@ -112,8 +112,8 @@ while True:
         markets = getmarkets(instrument)
 
         sql_execute(instrument)
+        conn.commit()
 
-    conn.commit()
 
     print(datetime.datetime.now().minute)
 
