@@ -31,9 +31,7 @@ except KeyError:
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 #default='postgres://localhost/postgres',  # E.g., for local dev
-database_url = os.getenv(
-    'DATABASE_URL'
-)
+database_url = os.getenv(DATABASE_URL)
 
 #database="funding_stats", user='postgres', password='password', host='127.0.0.1', port='5432'
 try:
