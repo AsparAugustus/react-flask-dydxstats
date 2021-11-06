@@ -25,7 +25,6 @@
     "yarn": "1.22.17"
   },
   "scripts": {
-    //"start": "react-scripts start",
     "start": "node server.js",
     "start-api": "cd api && flask run --no-debugger",
     "build": "react-scripts build",
