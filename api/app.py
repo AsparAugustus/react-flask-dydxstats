@@ -30,11 +30,12 @@ except KeyError:
     pass
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-
+"""
 database_url = os.getenv(
     'DATABASE_URL',
     #default='postgres://localhost/postgres',  # E.g., for local dev
 )
+"""
 
 
 try:
